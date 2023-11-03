@@ -1,0 +1,9 @@
+Chess Engine:
+	- Create board representation @done
+	- Generate semi legal moves @done
+	- Generate legas moves @done
+	- Optimize @done
+
+Potential Optimization:
+	- Use bitfields or single u8 for piece value representation
+	- Optimize the heck out of pin- & checkmask calculations

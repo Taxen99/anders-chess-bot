@@ -1,0 +1,31 @@
+[Event "Rated Blitz game"]
+[Date "????.??.??"]
+[Round "?"]
+[White "ensaha"]
+[Black "Elda64"]
+[Result "0-1"]
+[BlackTitle "IM"]
+[WhiteElo "2443"]
+[BlackElo "2583"]
+[ECO "A25"]
+[Opening "English Opening: King's English Variation, Reversed Closed Sicilian"]
+[TimeControl "180+0"]
+[UTCDate "2015.11.30"]
+[UTCTime "17:28:27"]
+[Termination "Normal"]
+[WhiteRatingDiff "-7"]
+[BlackRatingDiff "+8"]
+
+1. c4 e5 2. Nc3 Nc6 3. g3 Bc5 4. Bg2 d6 5. e3 a6 6. Nge2 Ba7 7. O-O h5 8.
+d4 h4 9. a3 hxg3 10. hxg3 Qg5 11. Re1 Bg4 12. Qd3 Qh5 13. Kf1 Nf6 14. d5
+Bh3 15. Ng1 Bxg2+ 16. Kxg2 Ng4 17. Nd1 Ne7 18. b4 e4 19. Qc3 Nf5 20. c5
+Qh2+ 21. Kf1 Qh1 22. Ke2 Rh2 23. Kd2 Nxf2 24. Nxf2 Rxf2+ 25. Kd1 Qg2 26.
+Rb1 dxc5 27. bxc5 O-O-O 28. d6 cxd6 29. c6 b5 30. Rb2 d5 31. Rxf2 Qxf2 32.
+Qd2 d4 33. Re2 dxe3 34. Rxf2 exf2 35. Ke2 Rxd2+ 36. Bxd2 fxg1=Q 37. Bf4
+Nxg3+ 38. Kd2 Qe3+ 39. Bxe3 Bxe3+ 40. Kxe3 Kc7 41. Kf4 Kxc6 42. Kxg3 a5 43.
+Kf4 a4 44. Kxe4 Kc5 45. Kd3 g6 46. Kc3 g5 47. Kd3 g4 48. Ke3 g3 49. Kf3 b4
+50. axb4+ Kxb4 51. Kxg3 Kb3 52. Kf3 Kb2 53. Ke4 a3 54. Kf5 a2 55. Kf6 a1=Q
+56. Kg7 Qb1 57. Kf8 Kc2 58. Ke7 f6 59. Kf8 f5 60. Kf7 f4 61. Ke7 Qb5 62.
+Kf7 Kc3 63. Ke7 Kd4 64. Ke6 Qa5 65. Kd6 Qd5+ 66. Kc7 Ke5 67. Kb6 Kd6 68.
+Ka6 Qb3 69. Ka7 Kc7 70. Ka6 Qb6# 0-1
+

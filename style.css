@@ -1,0 +1,158 @@
+:root {
+	--cell-size: calc((min(100vh, 100vw) - 200px) / 8);
+	--border-radius: 0.2rem;
+}
+
+body, head, *, *::before, *::after
+{
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, system-ui, Helvetica, Arial, sans-serif;
+	-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+}
+
+body {
+	background-color: #302E2B;
+	display: flex;
+}
+
+.game {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+}
+
+.board {
+	display: grid;
+	grid-template-columns: repeat(8, var(--cell-size));
+	position: relative;
+}
+
+.row:nth-child(even) >:nth-child(even), .row:nth-child(odd) >:nth-child(odd)
+{
+	background-color: #EEEED5;
+}
+.row:nth-child(even) >:nth-child(even)::before, .row:nth-child(odd) >:nth-child(odd)::before
+{
+	color: #7C955D;
+}
+.row:nth-child(even) >:nth-child(even)::after, .row:nth-child(odd) >:nth-child(odd)::after
+{
+	color: #7C955D;
+}
+
+.row:nth-child(even) >:nth-child(odd), .row:nth-child(odd) >:nth-child(even)
+{
+	background-color: #7C955D;
+}
+.row:nth-child(even) >:nth-child(odd)::before, .row:nth-child(odd) >:nth-child(even)::before
+{
+	color: #EEEED5;
+}
+.row:nth-child(even) >:nth-child(odd)::after, .row:nth-child(odd) >:nth-child(even)::after
+{
+	color: #EEEED5;
+}
+
+.cell
+{
+	width: var(--cell-size);
+	height: var(--cell-size);
+	position: relative;
+}
+
+img
+{
+	width: 100%;
+	position: relative;
+	z-index: 9999;
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	/* user-drag: none; */
+}
+
+/* .cell
+{
+	background-image: url("/images/Chess_bdt45.svg");
+} */
+
+*::before {
+	font-size: calc(var(--cell-size) / 4);
+	position: absolute;
+	top: calc(var(--cell-size) / 18);
+	left: calc(var(--cell-size) / 18);
+}
+*::after {
+	font-size: calc(var(--cell-size) / 4);
+	position: absolute;
+	bottom: calc(var(--cell-size) / 18);
+	right: calc(var(--cell-size) / 18);
+}
+
+.row:nth-child(1) .cell:nth-child(1) {
+	border-top-left-radius: var(--border-radius);
+}
+.row:nth-child(8) .cell:nth-child(1) {
+	border-top-right-radius: var(--border-radius);
+}
+.row:nth-child(1) .cell:nth-child(8) {
+	border-bottom-left-radius: var(--border-radius);
+}
+.row:nth-child(8) .cell:nth-child(8) {
+	border-bottom-right-radius: var(--border-radius);
+}
+
+.row:nth-child(1) .cell:nth-child(1)::before { content: "8"; }
+.row:nth-child(1) .cell:nth-child(2)::before { content: "7"; }
+.row:nth-child(1) .cell:nth-child(3)::before { content: "6"; }
+.row:nth-child(1) .cell:nth-child(4)::before { content: "5"; }
+.row:nth-child(1) .cell:nth-child(5)::before { content: "4"; }
+.row:nth-child(1) .cell:nth-child(6)::before { content: "3"; }
+.row:nth-child(1) .cell:nth-child(7)::before { content: "2"; }
+.row:nth-child(1) .cell:nth-child(8)::before { content: "1"; }
+
+.row:nth-child(1) .cell:nth-child(8)::after { content: "a"; }
+.row:nth-child(2) .cell:nth-child(8)::after { content: "b"; }
+.row:nth-child(3) .cell:nth-child(8)::after { content: "c"; }
+.row:nth-child(4) .cell:nth-child(8)::after { content: "d"; }
+.row:nth-child(5) .cell:nth-child(8)::after { content: "e"; }
+.row:nth-child(6) .cell:nth-child(8)::after { content: "f"; }
+.row:nth-child(7) .cell:nth-child(8)::after { content: "g"; }
+.row:nth-child(8) .cell:nth-child(8)::after { content: "h"; }
+
+.marker {
+	width: var(--cell-size);
+	height: var(--cell-size);
+	background-color: rgba(255, 100, 100, 0.5);
+	position: absolute;
+	z-index: 99999;
+	left: calc(var(--cell-size) * var(--file));
+	bottom: calc(var(--cell-size) * var(--rank));
+	pointer-events: none;
+}
+
+.marker-extra {
+	background-color: rgba(255, 255, 0, 0.5) !important;
+}
+
+.marker[data-file="0"] { --file: 0; }
+.marker[data-file="1"] { --file: 1; }
+.marker[data-file="2"] { --file: 2; }
+.marker[data-file="3"] { --file: 3; }
+.marker[data-file="4"] { --file: 4; }
+.marker[data-file="5"] { --file: 5; }
+.marker[data-file="6"] { --file: 6; }
+.marker[data-file="7"] { --file: 7; }
+.marker[data-rank="0"] { --rank: 0; }
+.marker[data-rank="1"] { --rank: 1; }
+.marker[data-rank="2"] { --rank: 2; }
+.marker[data-rank="3"] { --rank: 3; }
+.marker[data-rank="4"] { --rank: 4; }
+.marker[data-rank="5"] { --rank: 5; }
+.marker[data-rank="6"] { --rank: 6; }
+.marker[data-rank="7"] { --rank: 7; }
