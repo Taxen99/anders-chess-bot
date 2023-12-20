@@ -270,7 +270,7 @@ private:
 			
 		} while (rooks_ &= rooks_ - 1);
 
-		ComputedPositionData.check = check;
+		ComputedPositionData.check = check; // FIXME: Is this a bug in case of early return?
 	}
 private:
 	template<Piece::Color C>
