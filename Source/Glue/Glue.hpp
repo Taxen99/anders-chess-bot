@@ -21,20 +21,7 @@ public:
 	static inline std::function<void(Move)> MakeMove;
 	static inline std::function<ThinkResult(ThinkArgs)> Think;
 	static inline std::function<std::vector<int>(int)> ValidMoves;
-	// static inline std::function<void()> ;
+	static inline std::function<std::array<int, 64>()> QueryBoard;
 };
-
-/*
-What should js-land do:
-Control depth, ui, settings
-
-What should cpp-land do:
-All chess logic
-
-The Glue/API:
-StartGame() -> _
-MakeMove() -> valid_move
-BestMove(depth) -> eval
-*/
 
 }
