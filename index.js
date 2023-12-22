@@ -166,11 +166,13 @@ events.OnClickSquare = index => {
 			}
 			return;
 		}
-		if (!GLUE.ValidMoves(marked).split(';').slice(0, -1).map(n => +n).includes(index)) { return; }
-		RemoveMarkers();
 		if (marked == index) {
+			RemoveMarkers();
+			marked = null;
 			return;
 		}
+
+		if (!GLUE.ValidMoves(marked).split(';').slice(0, -1).map(n => +n).includes(index)) { return; }
 		GLUE.MakeMove(marked, index);
 		marked = null;
 
@@ -178,6 +180,7 @@ events.OnClickSquare = index => {
 		console.log("old", board);
 		board = str_repr.split(';').slice(0, -1).map(n => +n);
 		console.log("old", board);
+		RemoveMarkers();
 		DisplayBoard(board);
 		turn = !turn;
 
