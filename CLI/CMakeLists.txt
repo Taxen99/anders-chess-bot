@@ -1,0 +1,5 @@
+file(GLOB_RECURSE CLI_SOURCES CONFIGURE_DEPENDS ${PROJECT_SOURCE_DIR}/CLI/src/*.cpp)
+add_executable(CLI ${CLI_SOURCES})
+target_link_libraries(CLI PUBLIC AndersChessBot)
+target_include_directories(CLI PUBLIC "${PROJECT_SOURCE_DIR}/AndersChessBot/src")
+target_compile_definitions(CLI PUBLIC WORKING_DIRECTORY="${PROJECT_SOURCE_DIR}/")
